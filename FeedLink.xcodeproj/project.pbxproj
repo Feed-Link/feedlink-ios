@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		56C0EF442EEC054400EABEFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56C0EF2C2EEC054200EABEFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56C0EF332EEC054200EABEFF;
+			remoteInfo = FeedLink;
+		};
+		56C0EF4E2EEC054400EABEFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56C0EF2C2EEC054200EABEFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56C0EF332EEC054200EABEFF;
+			remoteInfo = FeedLink;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		56C0EF342EEC054200EABEFF /* FeedLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56C0EF432EEC054400EABEFF /* FeedLinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedLinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56C0EF4D2EEC054400EABEFF /* FeedLinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedLinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		56C6488B2EFA99F0004DD8A1 /* Exceptions for "FeedLink" folder in "FeedLink" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 56C0EF332EEC054200EABEFF /* FeedLink */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		56C0EF362EEC054200EABEFF /* FeedLink */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				56C6488B2EFA99F0004DD8A1 /* Exceptions for "FeedLink" folder in "FeedLink" target */,
+			);
+			path = FeedLink;
+			sourceTree = "<group>";
+		};
+		56C0EF462EEC054400EABEFF /* FeedLinkTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FeedLinkTests;
+			sourceTree = "<group>";
+		};
+		56C0EF502EEC054400EABEFF /* FeedLinkUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FeedLinkUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56C0EF312EEC054200EABEFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56C0EF402EEC054400EABEFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56C0EF4A2EEC054400EABEFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56C0EF2B2EEC054200EABEFF = {
+			isa = PBXGroup;
+			children = (
+				56C0EF362EEC054200EABEFF /* FeedLink */,
+				56C0EF462EEC054400EABEFF /* FeedLinkTests */,
+				56C0EF502EEC054400EABEFF /* FeedLinkUITests */,
+				56C0EF352EEC054200EABEFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56C0EF352EEC054200EABEFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56C0EF342EEC054200EABEFF /* FeedLink.app */,
+				56C0EF432EEC054400EABEFF /* FeedLinkTests.xctest */,
+				56C0EF4D2EEC054400EABEFF /* FeedLinkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56C0EF332EEC054200EABEFF /* FeedLink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56C0EF572EEC054400EABEFF /* Build configuration list for PBXNativeTarget "FeedLink" */;
+			buildPhases = (
+				56C0EF302EEC054200EABEFF /* Sources */,
+				56C0EF312EEC054200EABEFF /* Frameworks */,
+				56C0EF322EEC054200EABEFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				56C0EF362EEC054200EABEFF /* FeedLink */,
+			);
+			name = FeedLink;
+			packageProductDependencies = (
+			);
+			productName = FeedLink;
+			productReference = 56C0EF342EEC054200EABEFF /* FeedLink.app */;
+			productType = "com.apple.product-type.application";
+		};
+		56C0EF422EEC054400EABEFF /* FeedLinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56C0EF5A2EEC054400EABEFF /* Build configuration list for PBXNativeTarget "FeedLinkTests" */;
+			buildPhases = (
+				56C0EF3F2EEC054400EABEFF /* Sources */,
+				56C0EF402EEC054400EABEFF /* Frameworks */,
+				56C0EF412EEC054400EABEFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56C0EF452EEC054400EABEFF /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				56C0EF462EEC054400EABEFF /* FeedLinkTests */,
+			);
+			name = FeedLinkTests;
+			packageProductDependencies = (
+			);
+			productName = FeedLinkTests;
+			productReference = 56C0EF432EEC054400EABEFF /* FeedLinkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		56C0EF4C2EEC054400EABEFF /* FeedLinkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56C0EF5D2EEC054400EABEFF /* Build configuration list for PBXNativeTarget "FeedLinkUITests" */;
+			buildPhases = (
+				56C0EF492EEC054400EABEFF /* Sources */,
+				56C0EF4A2EEC054400EABEFF /* Frameworks */,
+				56C0EF4B2EEC054400EABEFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				56C0EF4F2EEC054400EABEFF /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				56C0EF502EEC054400EABEFF /* FeedLinkUITests */,
+			);
+			name = FeedLinkUITests;
+			packageProductDependencies = (
+			);
+			productName = FeedLinkUITests;
+			productReference = 56C0EF4D2EEC054400EABEFF /* FeedLinkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56C0EF2C2EEC054200EABEFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2610;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					56C0EF332EEC054200EABEFF = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+					56C0EF422EEC054400EABEFF = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = 56C0EF332EEC054200EABEFF;
+					};
+					56C0EF4C2EEC054400EABEFF = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = 56C0EF332EEC054200EABEFF;
+					};
+				};
+			};
+			buildConfigurationList = 56C0EF2F2EEC054200EABEFF /* Build configuration list for PBXProject "FeedLink" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56C0EF2B2EEC054200EABEFF;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 56C0EF352EEC054200EABEFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56C0EF332EEC054200EABEFF /* FeedLink */,
+				56C0EF422EEC054400EABEFF /* FeedLinkTests */,
+				56C0EF4C2EEC054400EABEFF /* FeedLinkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56C0EF322EEC054200EABEFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56C0EF412EEC054400EABEFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56C0EF4B2EEC054400EABEFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56C0EF302EEC054200EABEFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56C0EF3F2EEC054400EABEFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56C0EF492EEC054400EABEFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56C0EF452EEC054400EABEFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56C0EF332EEC054200EABEFF /* FeedLink */;
+			targetProxy = 56C0EF442EEC054400EABEFF /* PBXContainerItemProxy */;
+		};
+		56C0EF4F2EEC054400EABEFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56C0EF332EEC054200EABEFF /* FeedLink */;
+			targetProxy = 56C0EF4E2EEC054400EABEFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		56C0EF552EEC054400EABEFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = QV6YWMB5NS;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		56C0EF562EEC054400EABEFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = QV6YWMB5NS;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56C0EF582EEC054400EABEFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QV6YWMB5NS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FeedLink/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.feedlink.FeedLink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		56C0EF592EEC054400EABEFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QV6YWMB5NS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FeedLink/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.feedlink.FeedLink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		56C0EF5B2EEC054400EABEFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QV6YWMB5NS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.feedlink.FeedLinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeedLink.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FeedLink";
+			};
+			name = Debug;
+		};
+		56C0EF5C2EEC054400EABEFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QV6YWMB5NS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.feedlink.FeedLinkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeedLink.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FeedLink";
+			};
+			name = Release;
+		};
+		56C0EF5E2EEC054400EABEFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QV6YWMB5NS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.feedlink.FeedLinkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FeedLink;
+			};
+			name = Debug;
+		};
+		56C0EF5F2EEC054400EABEFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QV6YWMB5NS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.feedlink.FeedLinkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FeedLink;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56C0EF2F2EEC054200EABEFF /* Build configuration list for PBXProject "FeedLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56C0EF552EEC054400EABEFF /* Debug */,
+				56C0EF562EEC054400EABEFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56C0EF572EEC054400EABEFF /* Build configuration list for PBXNativeTarget "FeedLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56C0EF582EEC054400EABEFF /* Debug */,
+				56C0EF592EEC054400EABEFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56C0EF5A2EEC054400EABEFF /* Build configuration list for PBXNativeTarget "FeedLinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56C0EF5B2EEC054400EABEFF /* Debug */,
+				56C0EF5C2EEC054400EABEFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56C0EF5D2EEC054400EABEFF /* Build configuration list for PBXNativeTarget "FeedLinkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56C0EF5E2EEC054400EABEFF /* Debug */,
+				56C0EF5F2EEC054400EABEFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56C0EF2C2EEC054200EABEFF /* Project object */;
+}
