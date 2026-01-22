@@ -20,7 +20,7 @@ class LoginViewModel {
     let interactor: LoginInteractor
     
     var showAlert: AnyAppAlert?
-    var alertMessage: String?
+    private(set) var isLoading: Bool = false
     
     var email = ""
     var password = ""
@@ -30,19 +30,27 @@ class LoginViewModel {
     }
     
     func login() {
-        
         if email.isEmpty || password.isEmpty {
             showAlert = AnyAppAlert(title: "Email and password cannot be empty")
+            isLoading = false
             return
         }
         
+        isLoading = true
+        
         Task {
+            defer {
+                isLoading = false
+            }
+            
             do {
                 let response = try await interactor.login(email: email, password: password)
-                if response.statusCode != 202 {
+                
+                guard response.statusCode == 202 else {
                     showAlert = AnyAppAlert(title: response.message)
                     return
                 }
+                
                 interactor.updateViewState(showTabbarView: true)
             } catch {
                 showAlert = AnyAppAlert(error: error)

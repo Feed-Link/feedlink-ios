@@ -36,13 +36,20 @@ struct LoginView: View {
                     .background(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.3)))
             }
             
-            PrimaryButton(title: "Sign In") {
-                viewModel.login()
-            }
+            loginCTA
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 32)
         .showCustomAlert(alert: $viewModel.showAlert)
+    }
+    
+    var loginCTA: some View {
+        AsyncCallToActionButton(
+            isLoading: viewModel.isLoading,
+            title: "Sign In"
+        ) {
+            viewModel.login()
+        }
     }
 }
 
