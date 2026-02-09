@@ -20,6 +20,10 @@ class CoreBuilder {
         LoginView(viewModel: LoginViewModel(interactor: interactor))
     }
     
+    func registerView(path: Binding<[AuthPathOption]>) -> some View {
+        RegisterView(viewModel: RegisterViewModel(interactor: interactor), path: path)
+    }
+    
     func appView() -> some View {
         AppView(viewModel: AppViewModel(interactor: interactor))
     }

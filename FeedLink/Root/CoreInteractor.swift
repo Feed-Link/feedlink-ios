@@ -32,4 +32,8 @@ struct CoreInteractor {
         try await authManager.login(email: email, password: password)
     }
     
+    func register(name: String, email: String, contact: String, password: String) async throws -> AuthResponse {
+        try await authManager.register(name: name, email: email, contact: contact, password: password)
+    }
+    
 }

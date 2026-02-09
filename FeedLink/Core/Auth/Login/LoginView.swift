@@ -9,38 +9,48 @@ import SwiftUI
 
 struct LoginView: View {
     @State var viewModel: LoginViewModel
+    @State private var path: [AuthPathOption] = []
     
     var body: some View {
-        VStack(spacing: 24) {
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Email")
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundColor(.secondary)
+        NavigationStack(path: $path) {
+            VStack(spacing: 24) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Email")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundColor(.secondary)
+                    
+                    TextField("", text: $viewModel.email)
+                        .textContentType(.emailAddress)
+                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.3)))
+                }
                 
-                TextField("", text: $viewModel.email)
-                    .textContentType(.emailAddress)
-                    .keyboardType(.emailAddress)
-                    .autocapitalization(.none)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.3)))
-            }
-            
-            VStack(alignment: .leading, spacing: 8) {
-                Text("Password")
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundColor(.secondary)
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Password")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundColor(.secondary)
+                    
+                    SecureField("", text: $viewModel.password)
+                        .textContentType(.password)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.3)))
+                }
                 
-                SecureField("", text: $viewModel.password)
-                    .textContentType(.password)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.3)))
+                loginCTA
+                
+                Text("Sign up")
+                    .callToActionButton()
+                    .anyButton {
+                        path.append(.register)
+                    }
             }
-            
-            loginCTA
+            .padding(.horizontal, 24)
+            .padding(.vertical, 32)
+            .showCustomAlert(alert: $viewModel.showAlert)
+            .navigationDestinationForAuthModule(path: $path)
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 32)
-        .showCustomAlert(alert: $viewModel.showAlert)
     }
     
     var loginCTA: some View {
@@ -83,4 +93,5 @@ struct PrimaryButton: View {
     let coreBuilder = CoreBuilder(interactor: interactor)
     
     coreBuilder.loginView()
+        .previewEnvironment()
 }

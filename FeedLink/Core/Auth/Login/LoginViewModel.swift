@@ -5,6 +5,7 @@
 //  Created by roshan lamichhane on 12/24/25.
 //
 
+import Observation
 import SwiftUI
 
 protocol LoginInteractor {
@@ -32,7 +33,6 @@ class LoginViewModel {
     func login() {
         if email.isEmpty || password.isEmpty {
             showAlert = AnyAppAlert(title: "Email and password cannot be empty")
-            isLoading = false
             return
         }
         

@@ -15,5 +15,4 @@ struct AuthResponse: Codable {
         case message
         case data
     }
-    
 }
