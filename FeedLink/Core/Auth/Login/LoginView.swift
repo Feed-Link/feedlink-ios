@@ -9,47 +9,45 @@ import SwiftUI
 
 struct LoginView: View {
     @State var viewModel: LoginViewModel
-    @State private var path: [AuthPathOption] = []
     
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack(path: $viewModel.path) {
             VStack(spacing: 24) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Email")
-                        .font(.subheadline.weight(.semibold))
-                        .foregroundColor(.secondary)
-                    
-                    TextField("", text: $viewModel.email)
-                        .textContentType(.emailAddress)
-                        .keyboardType(.emailAddress)
-                        .autocapitalization(.none)
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.3)))
-                }
                 
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Password")
-                        .font(.subheadline.weight(.semibold))
-                        .foregroundColor(.secondary)
-                    
-                    SecureField("", text: $viewModel.password)
-                        .textContentType(.password)
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.3)))
-                }
+                FormField(
+                    label: "Email",
+                    placeholder: "Your email",
+                    text: $viewModel.email,
+                    validator: CompositeValidator(
+                        validators: [
+                            EmailValidator(),
+                            RequiredValidator(fieldName: "Email")
+                        ]
+                    ),
+                    keyboardType: .emailAddress,
+                    autocapitalization: .never,
+                )
+                
+                FormField(
+                    label: "Password",
+                    placeholder: "Your password",
+                    text: $viewModel.password,
+                    validator: RequiredValidator(fieldName: "Password"),
+                    isSecure: true,
+                )
                 
                 loginCTA
                 
                 Text("Sign up")
                     .callToActionButton()
                     .anyButton {
-                        path.append(.register)
+                        viewModel.path.append(.register)
                     }
             }
             .padding(.horizontal, 24)
             .padding(.vertical, 32)
             .showCustomAlert(alert: $viewModel.showAlert)
-            .navigationDestinationForAuthModule(path: $path)
+            .navigationDestinationForAuthModule(path: $viewModel.path)
         }
     }
     

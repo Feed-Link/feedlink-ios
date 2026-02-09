@@ -26,13 +26,25 @@ class LoginViewModel {
     var email = ""
     var password = ""
     
+    var path: [AuthPathOption] = []
+    
     init(interactor: LoginInteractor) {
         self.interactor = interactor
     }
     
     func login() {
-        if email.isEmpty || password.isEmpty {
-            showAlert = AnyAppAlert(title: "Email and password cannot be empty")
+        let validators = [
+            CompositeValidator(
+                validators: [
+                    EmailValidator(),
+                    RequiredValidator(fieldName: "Email")
+                ]
+            ).validate(email),
+            RequiredValidator(fieldName: "Password").validate(password)
+        ]
+        
+        guard validators.allSatisfy({$0 == nil}) else {
+            showAlert = AnyAppAlert(title: validators.compactMap({$0}).first ?? "Please enter email and password.")
             return
         }
         
@@ -46,8 +58,13 @@ class LoginViewModel {
             do {
                 let response = try await interactor.login(email: email, password: password)
                 
-                guard response.statusCode == 202 else {
+                guard response.statusCode == 202 || response.statusCode == 400 else {
                     showAlert = AnyAppAlert(title: response.message)
+                    return
+                }
+                
+                if response.statusCode == 400 {
+                    path.append(.verification)
                     return
                 }
                 
