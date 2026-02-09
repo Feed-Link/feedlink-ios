@@ -32,8 +32,15 @@ struct CoreInteractor {
         try await authManager.login(email: email, password: password)
     }
     
-    func register(name: String, email: String, contact: String, password: String) async throws -> AuthResponse {
-        try await authManager.register(name: name, email: email, contact: contact, password: password)
+    func register(name: String, email: String, contact: String, password: String, role: String, location: (lat: Double, long: Double)) async throws -> AuthResponse {
+        try await authManager.register(name: name, email: email, contact: contact, password: password, role: role, location: location)
     }
     
+    func verify(email: String, code: String) async throws -> AuthResponse {
+        try await authManager.verify(email: email, code: code)
+    }
+    
+    func resendCode(email: String) async throws -> AuthResponse {
+        try await authManager.resendCode(email: email)
+    }
 }

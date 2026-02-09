@@ -8,8 +8,9 @@
 import Observation
 import SwiftUI
 
+@MainActor
 protocol RegisterInteractor {
-    func register(name: String, email: String, contact: String, password: String) async throws -> AuthResponse
+    func register(name: String, email: String, contact: String, password: String, role: String, location: (lat: Double, long: Double)) async throws -> AuthResponse
 }
 
 extension CoreInteractor: RegisterInteractor {}
@@ -61,17 +62,17 @@ class RegisterViewModel {
         
         Task {
             defer { isLoading = false }
-            try await Task.sleep(for: .seconds(3))
-            path.wrappedValue.append(.verification)
-//            do {
-//                let response = try await interactor.register(name: name, email: email, contact: contact, password: password)
-//                guard response.statusCode == 202 else {
-//                    showAlert = AnyAppAlert(title: response.message)
-//                    return
-//                }
-//            } catch {
-//                showAlert = AnyAppAlert(error: error)
-//            }
+            do {
+                guard let role = role else { return }
+                let response = try await interactor.register(name: name, email: email, contact: contact, password: password, role: role.rawValue, location: (lat: 27.7103, long: 85.3222))
+                guard response.statusCode == 201 else {
+                    showAlert = AnyAppAlert(title: response.message)
+                    return
+                }
+                path.wrappedValue.append(.verification(email: email))
+            } catch {
+                showAlert = AnyAppAlert(error: error)
+            }
         }
     }
     

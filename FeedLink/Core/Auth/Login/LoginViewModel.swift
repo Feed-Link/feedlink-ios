@@ -8,6 +8,7 @@
 import Observation
 import SwiftUI
 
+@MainActor
 protocol LoginInteractor {
     func login(email: String, password: String) async throws -> AuthResponse
     func updateViewState(showTabbarView: Bool)
@@ -64,7 +65,7 @@ class LoginViewModel {
                 }
                 
                 if response.statusCode == 400 {
-                    path.append(.verification)
+                    path.append(.verification(email: email))
                     return
                 }
                 

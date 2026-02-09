@@ -16,6 +16,11 @@ struct RegisterView: View {
     }
     
     var path: Binding<[AuthPathOption]>
+
+    init(viewModel: RegisterViewModel, path: Binding<[AuthPathOption]>) {
+        _viewModel = State(initialValue: viewModel)
+        self.path = path
+    }
     
     var body: some View {
         ScrollView() {
@@ -95,8 +100,7 @@ struct RegisterView: View {
 
 #Preview {
     let container = DevPreview.shared.container
-    RegisterView(
-        viewModel: RegisterViewModel(interactor: CoreInteractor(container: container)),
-        path: .constant([])
-    )
+    let builder = CoreBuilder(interactor: CoreInteractor(container: container))
+    builder.registerView(path: .constant([]))
+        .previewEnvironment()
 }

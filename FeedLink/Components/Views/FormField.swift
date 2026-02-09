@@ -36,6 +36,12 @@ struct MinLengthValidator: FieldValidator {
     }
 }
 
+struct OTPValidator: FieldValidator {
+    func validate(_ value: String) -> String? {
+        value.count == 6 ? nil : "Please enter a valid code"
+    }
+}
+
 struct CompositeValidator: FieldValidator {
     let validators: [FieldValidator]
     

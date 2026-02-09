@@ -26,6 +26,7 @@ struct AsyncCallToActionButton: View {
         .anyButton(.press) {
             action()
         }
+        .disabled(isLoading)
     }
 }
 

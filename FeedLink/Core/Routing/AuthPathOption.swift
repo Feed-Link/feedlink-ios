@@ -10,7 +10,7 @@ import SwiftUI
 enum AuthPathOption: Hashable {
     case login
     case register
-    case verification
+    case verification(email: String)
 }
 
 struct NavDestForAuthModuleViewModifier: ViewModifier {
@@ -26,8 +26,8 @@ struct NavDestForAuthModuleViewModifier: ViewModifier {
                     builder.loginView()
                 case .register:
                     builder.registerView(path: $path)
-                case .verification:
-                    EmptyView()
+                case .verification(let email):
+                    builder.verificationView(path: $path, email: email)
                 }
             }
     }

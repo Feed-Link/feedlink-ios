@@ -24,6 +24,14 @@ class CoreBuilder {
         RegisterView(viewModel: RegisterViewModel(interactor: interactor), path: path)
     }
     
+    func verificationView(path: Binding<[AuthPathOption]>, email: String) -> some View {
+        VerificationView(
+            viewModel: VerificationViewModel(interactor: interactor),
+            email: email,
+            path: path
+        )
+    }
+    
     func appView() -> some View {
         AppView(viewModel: AppViewModel(interactor: interactor))
     }
