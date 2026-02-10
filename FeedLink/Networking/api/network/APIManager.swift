@@ -24,6 +24,9 @@ class APIManager: APIManagerProtocol {
         let (data, response) = try await urlSession.data(for: request.createUrlRequest(authToken: authToken))
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data), let prettyData = try? JSONSerialization.data(withJSONObject: jsonObj, options: .prettyPrinted), let jsonString = String(data: prettyData, encoding: .utf8) {
+                print("ERROR Response For - \(request.path): \n\(jsonString)")
+            }
             throw NetworkError.invalidServerResponse
         }
         

@@ -68,8 +68,13 @@ class LoginViewModel {
                     path.append(.verification(email: email))
                     return
                 }
-                
+                guard let accessToken = response.data else {
+                    showAlert = AnyAppAlert(title: "Access token not found!")
+                    return
+                }
+                UserDefaults.accessToken = accessToken
                 interactor.updateViewState(showTabbarView: true)
+                
             } catch {
                 showAlert = AnyAppAlert(error: error)
             }

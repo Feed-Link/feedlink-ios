@@ -38,7 +38,7 @@ extension RequestProtocol {
     }
     
     var addAuthorizationToken: Bool {
-        true
+        false
     }
     
     func createUrlRequest(authToken: String) throws -> URLRequest {
@@ -65,7 +65,7 @@ extension RequestProtocol {
         }
         
         if addAuthorizationToken {
-            urlRequest.setValue(authToken, forHTTPHeaderField: "Authorization")
+            urlRequest.setValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
         }
         
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")

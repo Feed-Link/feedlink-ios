@@ -23,18 +23,3 @@ class AppState {
         showTabBar = showTabbarView
     }
 }
-
-fileprivate extension UserDefaults {
-    private struct Keys {
-        static let showTabBarView = "showTabBarView"
-    }
-    
-    static var showTabbarView: Bool {
-        get {
-            standard.bool(forKey: Keys.showTabBarView)
-        }
-        set {
-            standard.set(newValue, forKey: Keys.showTabBarView)
-        }
-    }
-}

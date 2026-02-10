@@ -12,9 +12,9 @@ struct TabBarView: View {
     
     var body: some View {
         TabView {
-            builder.homeView()
+            builder.foodListView()
                 .tabItem {
-                    Label("Home", systemImage: "house.fill")
+                    Label("Food List", systemImage: "fork.knife.circle.fill")
                 }
             builder.profileView()
                 .tabItem {

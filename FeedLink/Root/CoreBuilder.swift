@@ -40,8 +40,8 @@ class CoreBuilder {
         TabBarView()
     }
     
-    func homeView() -> some View {
-        HomeView(viewModel: HomeViewModel(interactor: interactor))
+    func foodListView() -> some View {
+        FoodListView(viewModel: FoodListViewModel(interactor: interactor))
     }
     
     func profileView() -> some View {

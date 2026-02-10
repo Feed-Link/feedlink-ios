@@ -16,7 +16,7 @@ class DataParser: DataParserProtocol {
     
     init(jsonDecoder: JSONDecoder = JSONDecoder()) {
         self.jsonDecoder = jsonDecoder
-        self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+//        self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
     }
     
     func parse<T>(data: Data) throws -> T where T : Decodable {

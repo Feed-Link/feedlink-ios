@@ -11,10 +11,12 @@ import Foundation
 struct CoreInteractor {
     private let appState: AppState
     private let authManager: AuthManager
+    private let foodManager: FoodManager
     
     init(container: DependencyContainer) {
         self.authManager = container.resolve(AuthManager.self)!
         self.appState = container.resolve(AppState.self)!
+        self.foodManager = container.resolve(FoodManager.self)!
     }
     
     // MARK: - AppState
@@ -42,5 +44,10 @@ struct CoreInteractor {
     
     func resendCode(email: String) async throws -> AuthResponse {
         try await authManager.resendCode(email: email)
+    }
+    
+    // MARK: - Food Manager
+    func fetchFoods() async throws -> [Food] {
+        try await foodManager.fetchFoods()
     }
 }
