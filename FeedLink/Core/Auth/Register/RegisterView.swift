@@ -42,14 +42,12 @@ struct RegisterView: View {
                         validators: [
                             RequiredValidator(fieldName: "Email"),
                             EmailValidator(),
-                            
                         ]
                     ),
                     keyboardType: .emailAddress,
                     autocapitalization: .never,
                     submitLabel: .next,
-                    onSubmit: { focusField = .contact
-                    }
+                    onSubmit: { focusField = .contact }
                 )
                 
                 FormField(

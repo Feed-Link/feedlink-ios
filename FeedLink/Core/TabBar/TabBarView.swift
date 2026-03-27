@@ -16,6 +16,10 @@ struct TabBarView: View {
                 .tabItem {
                     Label("Food List", systemImage: "fork.knife.circle.fill")
                 }
+            builder.addFoodView()
+                .tabItem {
+                    Label("Add Food", systemImage: "plus.circle.fill")
+                }
             builder.profileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")

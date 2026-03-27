@@ -47,4 +47,8 @@ class CoreBuilder {
     func profileView() -> some View {
         ProfileView(viewModel: ProfileViewModel(interactor: interactor))
     }
+    
+    func addFoodView() -> some View {
+        AddFoodView(viewModel: AddFoodViewModel(interactor: interactor))
+    }
 }
